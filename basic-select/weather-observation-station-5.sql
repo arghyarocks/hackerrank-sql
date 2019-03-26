@@ -13,3 +13,9 @@
     ORDER BY LENGTH(City) DESC, City 
     LIMIT 1
 );
+
+
+Another working //Limit not working for me
+select * from (select city, length(city) from station order by length(city),city) where rownum=1;
+select * from (select city, length(city) from station order by length(city) desc) where rownum=1;
+
